@@ -70,7 +70,6 @@ Rarity.tools is a great website for watching upcoming NFT projects. But lately I
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Puppeteer](https://pptr.dev/)
