@@ -14,7 +14,7 @@ This template is inspired from https://github.com/othneildrew/Best-README-Templa
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Marouan-chak/nft-scrapper">
+  <a href="https://github.com/Marouan-chak/NFTScrapper">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -46,6 +46,7 @@ This template is inspired from https://github.com/othneildrew/Best-README-Templa
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+    <li><a href="#project-Overview">Project Overview</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -101,7 +102,7 @@ In order to get started, you need to configure the following prequisites
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Marouan-chak/nft-scrapper.git
+   git clone https://github.com/Marouan-chak/NFTScrapper.git
    ```
 2. [Optional] Configure _docker-compose-tls.yml_ to point to your current Traefik instance and domain.
 
@@ -123,8 +124,8 @@ In order to get started, you need to configure the following prequisites
 
 
 
-
-## Project Overviews
+<!-- Project-Overview -->
+## Project Overview
 The following picture describe the different components of the projects and the differents requests between them:
 
 ![Different components of the scrapper](/images/Architecture.jpg)
@@ -160,7 +161,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Marouan CHAKRAN - [marouan-chakran](https://www.linkedin.com/in/marouan-chakran/) - marouane.chakran@gmail.com
 
-Project Link: [https://github.com/Marouan-chak/nft-scrapper](https://github.com/Marouan-chak/nft-scrapper)
+Project Link: [https://github.com/Marouan-chak/NFTScrapper](https://github.com/Marouan-chak/NFTScrapper)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -171,6 +172,6 @@ Project Link: [https://github.com/Marouan-chak/nft-scrapper](https://github.com/
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/Marouan-chak/nft-scrapper/blob/main/LICENSE.txt 
+[license-url]: https://github.com/Marouan-chak/NFTScrapper/blob/main/LICENSE.txt 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/marouan-chakran/
