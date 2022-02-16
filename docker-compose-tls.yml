@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+  scrapper:
+    build: ./scrapper
+    restart: unless-stopped
+    image: scrapper:stable
+    entrypoint: /bin/bash
+    command: -c "node /home/pptruser/scripts/scrapper.js"
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - "3000"
+    networks:
+      - proxy
+      - scrapper
+    volumes:
+      - ./sharedFolder/:/home/pptruser/projects/
+      - ./scrapper/scripts/scrapper.js:/home/pptruser/scripts/scrapper.js
+  scrapper-api:
+    build: ./scrapper-api
+    restart: unless-stopped
+    image: scrapper-api:stable
+    networks:
+      - proxy
+      - scrapper
+    volumes:
+      - ./sharedFolder/:/root/projects/
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.scrapper-api.entrypoints=http"
+      - "traefik.http.routers.scrapper-api.rule=Host(`scrapper-api.svc.localgalaxy.org`)"
+      - "traefik.http.middlewares.scrapper-api-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.scrapper-api.middlewares=scrapper-api-https-redirect"
+      - "traefik.http.routers.scrapper-api-secure.entrypoints=https"
+      - "traefik.http.routers.scrapper-api-secure.rule=Host(`scrapper-api.svc.localgalaxy.org`)"
+      - "traefik.http.routers.scrapper-api-secure.tls=true"
+      - "traefik.http.routers.scrapper-api-secure.service=scrapper-api"
+      - "traefik.http.services.scrapper-api.loadbalancer.server.port=8000"
+      - "traefik.docker.network=proxy"
+networks:
+  proxy:
+    external: true
+  scrapper:
